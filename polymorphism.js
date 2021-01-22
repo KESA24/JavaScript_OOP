@@ -24,14 +24,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 // Overriding
-var Person = /** @class */ (function () {
-    function Person() {
+var Persons = /** @class */ (function () {
+    function Persons() {
     }
     //Methods
-    Person.prototype.talk = function () {
+    Persons.prototype.talk = function () {
         console.log('I am a person with whole feelings');
     };
-    return Person;
+    return Persons;
 }());
 var Staff = /** @class */ (function (_super) {
     __extends(Staff, _super);
@@ -43,7 +43,7 @@ var Staff = /** @class */ (function (_super) {
         console.log('I am a staff member');
     };
     return Staff;
-}(Person));
+}(Persons));
 var Student = /** @class */ (function (_super) {
     __extends(Student, _super);
     function Student() {
@@ -54,7 +54,7 @@ var Student = /** @class */ (function (_super) {
         console.log('I am a hardworking student');
     };
     return Student;
-}(Person));
+}(Persons));
 // Each time we create a class in OOP it becomes a type of like integers and strings that is subtyping
 //Subtyping
 // let person:Person = new Person()
@@ -64,7 +64,7 @@ var Student = /** @class */ (function (_super) {
 // let student: Student = new Student()
 // student.talk()
 // Here we show that person can change through subtyping nto different forms
-var person = new Person();
+var person = new Persons();
 person.talk();
 person = new Staff();
 person.talk();
@@ -108,12 +108,14 @@ var Sheep = /** @class */ (function (_super) {
     };
     return Sheep;
 }(Animal));
-// let cow:Cow = new Cow();
-// cow.communicate();
-// let cat: Cat = new Cat();
-// cat.communicate();
-// let sheep: Sheep = new Sheep();
-// sheep.communicate();
+//Normal non polymorphism
+var cow = new Cow();
+cow.communicate();
+var cat = new Cat();
+cat.communicate();
+var sheep = new Sheep();
+sheep.communicate();
+//Polymorhism here as animal changes
 var animal;
 animal = new Cow();
 animal.communicate();

@@ -12,7 +12,7 @@
 */
 
 // Overriding
-    class Person {
+    class Persons {
         //Methods
         talk(){
             console.log('I am a person with whole feelings');
@@ -20,7 +20,7 @@
         }
     }
 
-    class Staff extends Person{
+    class Staff extends Persons{
         //Methods
         talk(){
             console.log('I am a staff member');
@@ -28,7 +28,7 @@
         }
     }
 
-    class Student extends Person {
+    class Student extends Persons {
         //Methods
         talk(){
             console.log('I am a hardworking student');
@@ -49,7 +49,7 @@
     // student.talk()
 
     // Here we show that person can change through subtyping nto different forms
-    let person: Person = new Person();
+    let person: Persons = new Persons();
     person.talk();
 
     person = new Staff()
